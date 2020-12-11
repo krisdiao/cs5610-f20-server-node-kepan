@@ -1,25 +1,21 @@
-// let quizzes = require("./quizzes.json")
-// const quizModel = require("../models/quizzes/quizModel")
-//
-// const findAllQuizzes = () => {
-//     return quizModel.findAllQuizzes()
-// }
-// const findQuizById = (qid) => quizModel.findQuizById(qid)
-//
-// const findAllQuizzesDetails = () => quizModel.findAllQuizzesDetails()
+let quizzes = require("./quizzes.json")
+const quizzesDao = require('../daos/quizzes.dao.server')
+const quizModel = require("../models/quizzes/quizzesModel")
+
+const findAllQuizzes = () => {
+    return quizzesDao.findAllQuizzes()
+}
+const findQuizById = (qid) => quizzesDao.findQuizById(qid)
+
+// const findAllQuizzesDetails = () => quizzesDao.findAllQuizzesDetails()
 //
 // const createQuiz = () =>{
 //     const quiz = {title:"New Quiz"}
-//     return quizModel.createQuiz(quiz)
+//     return quizzesDao.createQuiz(quiz)
 // }
 //
-// const deleteQuiz = (qid) => quizModel.removeQuiz(qid)
-//
-//
-// const updateQuiz = (qid,newQuiz) =>quizModel.updateQuiz(qid,newQuiz)
-const quizzesDao = require('../daos/quizzes.dao.server')
-const findAllQuizzes = () => quizzesDao.findAllQuizzes()
-const findQuizById = (qid) => quizzesDao.findQuizById(qid)
+// const deleteQuiz = (qid) => quizzesDao.removeQuiz(qid)
 
-module.exports = { findAllQuizzes, findQuizById }
+
+module.exports = { findAllQuizzes, findQuizById,}
 

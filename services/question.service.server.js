@@ -1,15 +1,11 @@
 const questionModel = require("../models/questions/questionModel")
 const questions = require("./questions.json")
+const questionsDao = require('../daos/questions.dao.server')
 
-const findAllQuestions = () => questionModel.findAllQuestions()
-
-const findQuestionsForQuiz =(quizId) => questionModel.findQuestionForQuiz(quizId)
-// {
-//         const questionsForQuiz = questions.filter(question => question.quizId === quizId)
-//         return questionsForQuiz    }
+const findAllQuestions = () => questionsDao.findAllQuestions()
+const findQuestionById = (qid) => questionsDao.findQuestionById(qid)
+const findQuestionsForQuiz = (qid) => questionsDao.findQuestionsForQuiz(qid)
+module.exports = { findAllQuestions, findQuestionById, findQuestionsForQuiz }
 
 
-module.exports = {
-    findQuestionsForQuiz,findAllQuestions,
-}
 

@@ -22,5 +22,6 @@ app.use(bodyParser.json())
 
 require("./controllers/quizzes.controller.server")(app)
 require("./controllers/question.controller.server")(app)
+require("./controllers/quiz-attempts.controller.server")(app)
 
 app.listen(3000)

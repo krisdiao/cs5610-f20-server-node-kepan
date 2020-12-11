@@ -1,5 +1,5 @@
-const questionsModel = require('../models/questions/questions.model.server')
-const quizzesModel = require('../models/quizzes/quizzes.model.server')
+const questionsModel = require('../models/questions/questionModel')
+const quizzesModel = require('../models/quizzes/quizModel')
 
 const findAllQuestions = () => questionsModel.find()
 const findQuestionById = (qid) => questionsModel.findById(qid)
